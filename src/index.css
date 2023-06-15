@@ -12,14 +12,24 @@ body {
 }
 
 .cards-container {
+  max-width: 1152px;
+  margin: 0 auto;
   /* display: flex; */
   justify-content: center;
   gap: 32px;
 }
 
+@media screen and (max-width: 1024px) {
+  .cards-container {
+    
+    gap: 0;
+  }
+}
+
 .card-basic, .card-master, .card-Pro {
+  width: 100%;
   padding: 32px;
-  border-radius: 5px;
+  border-radius: 8px;
   background-color: white;
   /* box-shadow: 0 1px 3px 0 rgb(rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)); */
   box-shadow: 0 0 2px 0 black, 0 0 1px -1px black;
@@ -91,6 +101,9 @@ body {
   border: 2px solid white;
   background: white;
   color: rgb(30 41 59);
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms
 }
 
 .btn-pro:hover {
@@ -102,6 +115,10 @@ body {
   background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   color: white;
   border: none;
+  padding: 10px;
+  /* transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms */
 }
 
 .btn-dark:hover {
