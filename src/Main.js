@@ -1,12 +1,8 @@
-import Header from './Header';
-import Main from './Main';
+import React from 'react'
 
-function App() {
+function Main() {
   return (
-    <>
-      {/* <Header /> */}
-      <Main />
-      {/* <section className='container'>
+    <section className='container'>
         <div className='cards-container'>
             <article className='card-basic'>
                 <h2 className='card-title'>Basic</h2>
@@ -17,30 +13,19 @@ function App() {
                     <p className='card-text border-t'>2 users Allowed</p>
                     <p className='card-text border-t-b'>Send up to 3 GB</p>
                 </div>
-                <button className='btn linear-gradient'>Learn More</button>
+                <button className='btn btn-dark'>Learn More</button>
             </article>
 
             <article className='card-Pro linear-gradient'>
-                <h2 className='card-title'>Professional</h2>
-                <h3 className='card-price'><span>$</span>24.99</h3>
-                <h3 className='card-price'><span>$</span>249.99</h3>
-                <div className='card-description'>
+                <h2 className='card-title pro-title'>Professional</h2>
+                <h3 className='card-price pro-price'><span>$</span>24.99</h3>
+                <h3 className='card-price pro-price'><span>$</span>249.99</h3>
+                <div className='card-description pro-dec'>
                     <p className='card-text border-t'>1 TB Storage</p>
                     <p className='card-text border-t'>5 users Allowed</p>
                     <p className='card-text border-t-b'>Send up to 10 GB</p>
                 </div>
-                <button className='btn linear-gradient'>Learn More</button>
-            </article>
-            <article className='diff linear-gradient card-basic'>
-                <h2 className=''>Professional</h2>
-                <h3 className=''><span>$</span>24.99</h3>
-                <h3 className='card-price'><span>$</span>249.99</h3>
-                <div className='card-description'>
-                    <p className='card-text border-t'>1 TB Storage</p>
-                    <p className='card-text border-t'>5 users Allowed</p>
-                    <p className='card-text border-t-b'>Send up to 10 GB</p>
-                </div>
-                <button className='btn linear-gradient'>Learn More</button>
+                <button className='btn btn-pro'>Learn More</button>
             </article>
 
             <article className='card-master'>
@@ -52,12 +37,11 @@ function App() {
                     <p className='card-text border-t'>10 users Allowed</p>
                     <p className='card-text border-t-b'>Send up to 20 GB</p>
                 </div> 
-                <button className='btn linear-gradient'>Learn More</button>
+                <button className='btn btn-dark'>Learn More</button>
             </article>
         </div>
-    </section> */}
-    </>
-  );
+    </section>
+  )
 }
 
-export default App;
+export default Main
