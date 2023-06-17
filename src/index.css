@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&display=swap');
+
 body {
   margin: 0;
   text-align: center;
@@ -5,33 +7,72 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 15px;
+  background-color: hsl(240, 78%, 98%);
 }
 
 .container {
   padding: 20px;
 }
 
+.header-title {
+  color: rgb(30 41 59);
+  margin-bottom: 32px;
+  font-size: 36px;
+}
+
+.toggle-container {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.checkbox {
+  display: none;
+}
+
+.toggle-holder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 25px;
+  width: 50px;
+  padding: 3px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.toggle {
+  position: absolute;
+  top: 2;
+  left: 2;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.15s linear;
+}
+
+.checkbox:checked + .toggle-holder .toggle {
+  transform: translateX(24px);
+}
+
 .cards-container {
   max-width: 1152px;
   margin: 0 auto;
-  /* display: flex; */
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 32px;
-}
-
-@media screen and (max-width: 1024px) {
-  .cards-container {
-    
-    gap: 0;
-  }
+  gap: 30px;
 }
 
 .card-basic, .card-master, .card-Pro {
-  width: 100%;
   padding: 32px;
   border-radius: 8px;
   background-color: white;
-  /* box-shadow: 0 1px 3px 0 rgb(rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)); */
   box-shadow: 0 0 2px 0 black, 0 0 1px -1px black;
 }
 
@@ -53,13 +94,11 @@ body {
 
 .card-price span {
   font-size: 30px;
-  /* line-height: 36px; */
   margin-right: 10px;
 }
 
 .card-description {
   display: flex;
-  /* align-items: center; */
   flex-direction: column;
   color: rgb(71 85 105);
   margin: 32px 0;
@@ -73,7 +112,6 @@ body {
 .border-t-b {
   border-top: 1px solid rgb(203 213 225);
   border-bottom: 1px solid rgb(203 213 225);
-  /* margin-bottom: 20px; */
 }
 
 .border-t {
@@ -116,14 +154,37 @@ body {
   color: white;
   border: none;
   padding: 10px;
-  /* transition-property: all;
+  border: 2px solid hsla(0, 0%, 100%);
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms */
+  transition-duration: 150ms
 }
 
 .btn-dark:hover {
-  background: transparent;
-  color: blue;
-  border: 2px solid blue;
+  background: linear-gradient(90deg, hsla(0, 0%, 100%, 0), hsla(0, 0%, 100%, 0));
+  color: hsl(237, 63%, 64%);
+  border: 2px solid rgb(216, 216, 236);
+}
+
+/* media query */
+@media (min-width: 1024px) {
+  .cards-container {
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+  
+  .card-basic, .card-master, .card-Pro {
+    width: 100%;
+  }
+  
+  .prof {
+    transform: scale(1.10);
+  }
+}
+
+@media (width: 768px) {
+  .card-basic, .card-master, .card-Pro {
+    width: 45%;
+  }
 }
 
