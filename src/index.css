@@ -205,5 +205,14 @@ body {
   .card-basic, .card-master, .card-Pro {
     width: 45%;
   }
+
+  .bg-bottom, .bg-top {
+    display: none;
+  }
 }
 
+@media (max-width: 425px) {
+  .bg-bottom, .bg-top {
+    display: none;
+  }
+}
